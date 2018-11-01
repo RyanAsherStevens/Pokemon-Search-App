@@ -8,7 +8,8 @@ class App extends Comment {
       search: "",
       selectedPokemon: null,
       abilities: [],
-      moves: []
+      moves: [],
+
     }
   }
 
@@ -38,9 +39,45 @@ class App extends Comment {
     `https://pokeapi.co/api/v2/pokemon/${name}`,
     {cache: "force-cache"})
         const json = await res.json()
+  
+
+    const abilityPromises = json.abilities.map(async (a) => {
+      const data = await fetch(a.ability.url)
+      const json = await data.json() 
+      return json
+    })
+
+    const abilities = await Promise.all(this.abilityPromises)
+
+    this.setState({selectedPokemon: json, abilities: abilities, search: name})
   }
 
-  
+  render() {
+    const results = this.generateSearchResults(this.state.search)
+    return (
+      <div className="App">
+        <div className="search">
+          <input 
+          onChange={this.onSearhChange}
+          type="text"
+          value={this.state.search} />
+          <ul>
+            {results.map(r => 
+              <li onClick={() => this.selectPokemon(r.name.abilityPromises)}>
+                {r.name.abilityPromises}
+              </li>
+              )}
+          </ul>
+        </div>
+
+        {this.state.selectedPokemon &&
+        <div className="result">
+          <img src={this.state.selectedPokemon.sprites.back_default.back_shiny.font_default.font_shiny}/>
+        </div>
+        }
+      </div>
+    );
+  }
 }
 
 
