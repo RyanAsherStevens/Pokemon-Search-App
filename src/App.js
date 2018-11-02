@@ -74,8 +74,8 @@ class App extends Component {
         <div className="result">
           <img src={this.state.selectedPokemon.sprites.back_default}/>
           <img src={this.state.selectedPokemon.sprites.front_default}/>
-          <img src={this.state.selectedPokemon.sprites.back_shiny_default}/>
-          <img src={this.state.selectedPokemon.sprites.front_shiny_default}/>
+          <img src={this.state.selectedPokemon.sprites.back_shiny}/>
+          <img src={this.state.selectedPokemon.sprites.front_shiny}/>
         </div>
         }
       </div>
