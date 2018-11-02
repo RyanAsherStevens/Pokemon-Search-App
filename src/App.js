@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-class App extends Comment {
+
+class App extends Component {
   constructor() {
     super();
     this.state = {
@@ -9,7 +10,7 @@ class App extends Comment {
       selectedPokemon: null,
       abilities: [],
       moves: [],
-
+      stats: []
     }
   }
 
