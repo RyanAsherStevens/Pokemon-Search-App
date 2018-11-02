@@ -50,7 +50,7 @@ class App extends Component {
     const abilities = await Promise.all(abilityPromises)
 
     const statsPromises = json.stats.map(async (s) => {
-      const data = await fetch(s.stats.url)
+      const data = await fetch(s.stat.url)
       const json = await data.json() 
       return json
     })
@@ -58,7 +58,7 @@ class App extends Component {
     const stats = await Promise.all(statsPromises)
 
     const movesPromises = json.moves.map(async (m) => {
-      const data = await fetch(m.moves.url)
+      const data = await fetch(m.move.url)
       const json = await data.json() 
       return json
     })
