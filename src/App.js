@@ -47,15 +47,15 @@ class App extends Component {
       return json
     })
 
-    const abilities = await Promise.all(abilityPromises)
+    // const abilities = await Promise.all(abilityPromises)
 
-    const statsPromises = json.stats.map(async (s) => {
-      const data = await fetch(s.stat.url)
-      const json = await data.json() 
-      return json
-    })
+    // const statsPromises = json.stats.map(async (s) => {
+    //   const data = await fetch(s.stat.url)
+    //   const json = await data.json() 
+    //   return json
+    // })
 
-    const stats = await Promise.all(statsPromises)
+    // const stats = await Promise.all(statsPromises)
 
     const movesPromises = json.moves.map(async (m) => {
       const data = await fetch(m.move.url)
@@ -65,7 +65,7 @@ class App extends Component {
 
     const moves = await Promise.all(movesPromises)
 
-    this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves, search: name})
+    this.setState({selectedPokemon: json, stats: stats, moves: moves, search: name})
   }
 
   render() {

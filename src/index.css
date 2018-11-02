@@ -1,3 +1,8 @@
+/* ==============
+    Main Styling 
+=================*/
+
+
 body {
   margin: 0;
   padding: 0;
@@ -42,3 +47,12 @@ color: white;
   margin: 15px;
   padding: 15px
 }
+
+.App .search 
+ul li:nth-child(even) {
+background-color: aquamarine;
+}
+
+/* ======================
+Media Queries
+========================*/
