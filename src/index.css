@@ -53,7 +53,7 @@ color: white;
 }
 
 .App .search 
-ul li:nth-child(even) {
+ul li:nth-child(odd) {
 background-color: lightslategray;
 }
 
