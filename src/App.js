@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class App extends Component {
   constructor() {
     super();
@@ -16,11 +15,11 @@ class App extends Component {
 
   async componentDidMount() {
     const res = await  fetch('https://pokeapi.co/api/v2/pokemon/')
-    const json = await res.kson()
+    const json = await res.json()
     this.setState({pokemon: json.results})
   }
 
-  onSearhChange = event => {
+  onSearchChange = event => {
     this.setState({search: event.target.value})
   }
 
@@ -37,8 +36,8 @@ class App extends Component {
   selectPokemon = async (name) => {
     const res = 
       await fetch(
-    `https://pokeapi.co/api/v2/pokemon/${name}`,
-    {cache: "force-cache"})
+        `https://pokeapi.co/api/v2/pokemon/${name}/`,
+        {cache: "force-cache"})
         const json = await res.json()
   
 
@@ -59,7 +58,7 @@ class App extends Component {
       <div className="App">
         <div className="search">
           <input 
-          onChange={this.onSearhChange}
+          onChange={this.onSearchChange}
           type="text"
           value={this.state.search} />
           <ul>
@@ -75,6 +74,8 @@ class App extends Component {
         <div className="result">
           <img src={this.state.selectedPokemon.sprites.back_default}/>
           <img src={this.state.selectedPokemon.sprites.front_default}/>
+          <img src={this.state.selectedPokemon.sprites.back_shiny_default}/>
+          <img src={this.state.selectedPokemon.sprites.front_shiny_default}/>
         </div>
         }
       </div>
