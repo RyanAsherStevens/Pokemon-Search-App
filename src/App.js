@@ -47,7 +47,7 @@ class App extends Comment {
       return json
     })
 
-    const abilities = await Promise.all(this.abilityPromises)
+    const abilities = await Promise.all(abilityPromises)
 
     this.setState({selectedPokemon: json, abilities: abilities, search: name})
   }
@@ -63,8 +63,8 @@ class App extends Comment {
           value={this.state.search} />
           <ul>
             {results.map(r => 
-              <li onClick={() => this.selectPokemon(r.name.abilityPromises)}>
-                {r.name.abilityPromises}
+              <li onClick={() => this.selectPokemon(r.name.)}>
+                {r.name}
               </li>
               )}
           </ul>
@@ -72,7 +72,8 @@ class App extends Comment {
 
         {this.state.selectedPokemon &&
         <div className="result">
-          <img src={this.state.selectedPokemon.sprites.back_default.back_shiny.font_default.font_shiny}/>
+          <img src={this.state.selectedPokemon.sprites.back_default}/>
+          <img src={this.state.selectedPokemon.sprites.front_default}/>
         </div>
         }
       </div>
