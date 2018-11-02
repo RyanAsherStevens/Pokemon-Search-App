@@ -20,6 +20,7 @@ body {
 
 .App .search {
   padding: 20px;
+  width: 100%;
 }
 
 .App .search
