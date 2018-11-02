@@ -49,7 +49,23 @@ class App extends Component {
 
     const abilities = await Promise.all(abilityPromises)
 
-    this.setState({selectedPokemon: json, abilities: abilities, search: name})
+    const statsPromises = json.abilities.map(async (s) => {
+      const data = await fetch(s.stats.url)
+      const json = await data.json() 
+      return json
+    })
+
+    const stats = await Promise.all(statsPromises)
+
+    const movesPromises = json.abilities.map(async (m) => {
+      const data = await fetch(m.moves.url)
+      const json = await data.json() 
+      return json
+    })
+
+    const moves = await Promise.all(movesPromises)
+
+    this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves, search: name})
   }
 
   render() {
