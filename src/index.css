@@ -46,7 +46,8 @@ color: white;
 .App .result {
   background-color: azure;
   margin: 15px;
-  padding: 15px
+  padding: 15px;
+  width: 50%;
 }
 
 .App .search 
