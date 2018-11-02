@@ -12,3 +12,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.App {
+  display: flex;
+}
+
+.App .search
+ul li {
+list-style: none;
+padding: 25px;
+margin: 0;
+cursor: pointer;
+}
+
+.App .search 
+input {
+  width: 80%;
+  margin-bottom: 25px;
+}
+
+.App .search 
+ul li:hover {
+background-color: green;
+color: white;
+}
+
+.App .result {
+  background-color: azure;
+  margin: 15px;
+  padding: 15px
+}
