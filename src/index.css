@@ -38,7 +38,7 @@ input {
 
 .App .search 
 ul li:hover {
-background-color: green;
+background-color: blue;
 color: white;
 }
 
@@ -50,7 +50,7 @@ color: white;
 
 .App .search 
 ul li:nth-child(even) {
-background-color: aquamarine;
+background-color: lightslategray;
 }
 
 /* ======================
