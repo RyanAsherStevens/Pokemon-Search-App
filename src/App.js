@@ -42,24 +42,24 @@ class App extends Component {
   
 
     const abilityPromises = json.abilities.map(async (a) => {
-      const data = await fetch(a.ability.url)
-      const json = await data.json() 
+      const res = await fetch(a.ability.url)
+      const json = await res.json() 
       return json
     })
 
     const abilities = await Promise.all(abilityPromises)
 
     const statsPromises = json.stats.map(async (s) => {
-      const data = await fetch(s.stat.url)
-      const json = await data.json() 
+      const res = await fetch(s.stat.url)
+      const json = await res.json() 
       return json
     })
 
     const stats = await Promise.all(statsPromises)
 
     const movesPromises = json.moves.map(async (m) => {
-      const data = await fetch(m.move.url)
-      const json = await data.json() 
+      const res = await fetch(m.move.url)
+      const json = await res.json() 
       return json
     })
 
@@ -73,6 +73,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="search">
+        <label>Who's that Pokemon?</label>
           <input 
           onChange={this.onSearchChange}
           type="text"
