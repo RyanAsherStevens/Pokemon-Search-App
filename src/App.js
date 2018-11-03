@@ -94,6 +94,18 @@ class App extends Component {
           <img src={this.state.selectedPokemon.sprites.front_default}/>
           <img src={this.state.selectedPokemon.sprites.back_shiny}/>
           <img src={this.state.selectedPokemon.sprites.front_shiny}/>
+          <h1>Abilities:</h1>
+            <ul>
+            {this.state.abilities.map(a => <p>{a.name}</p>)}
+            </ul>
+            <h1>Moves:</h1>
+            <ul>
+            {this.state.moves.map(m => <p>{m.name}</p>)}
+            </ul>
+            <h1>Stats:</h1>
+            <ul>
+            {this.state.stats.map(s => <p>{s.name}</p>)}
+            </ul>
         </div>
         }
       </div>
