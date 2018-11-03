@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Abilities from './Abilities';
+// import Abilities from './Abilities';
 
 class App extends Component {
   constructor() {
@@ -42,13 +42,13 @@ class App extends Component {
         const json = await res.json()
   
 
-    // const abilityPromises = json.abilities.map(async (a) => {
-    //   const res = await fetch(a.ability.url)
-    //   const json = await res.json() 
-    //   return json
-    // })
+    const abilityPromises = json.abilities.map(async (a) => {
+      const res = await fetch(a.ability.url)
+      const json = await res.json() 
+      return json
+    })
 
-    // const abilities = await Promise.all(abilityPromises)
+    const abilities = await Promise.all(abilityPromises)
 
     const statsPromises = json.stats.map(async (s) => {
       const res = await fetch(s.stat.url)
@@ -66,7 +66,7 @@ class App extends Component {
 
     const moves = await Promise.all(movesPromises)
 
-    this.setState({selectedPokemon: json, stats: stats, moves: moves, search: name})
+    this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves, search: name})
   }
 
   render() {
