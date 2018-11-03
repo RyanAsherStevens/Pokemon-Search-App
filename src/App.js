@@ -43,7 +43,7 @@ class App extends Component {
   
 
     const abilityPromises = json.abilities.map(async (a) => {
-      const data = await fetch(a.ability.url)
+      const data = await fetch(a.ability.url, {cache: "force-cache"})
       const json = await data.json() 
       return json
     })
@@ -51,7 +51,7 @@ class App extends Component {
     const abilities = await Promise.all(abilityPromises)
 
     const statsPromises = json.stats.map(async (s) => {
-      const data = await fetch(s.stat.url)
+      const data = await fetch(s.stat.url, {cache: "force-cache"})
       const json = await data.json() 
       return json
     })
@@ -59,7 +59,7 @@ class App extends Component {
     const stats = await Promise.all(statsPromises)
 
     const movesPromises = json.moves.map(async (m) => {
-      const data = await fetch(m.move.url)
+      const data = await fetch(m.move.url, {cache: "force-cache"})
       const json = await data.json() 
       return json
     })
