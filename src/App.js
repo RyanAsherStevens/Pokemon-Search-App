@@ -20,6 +20,12 @@ class App extends Component {
     this.setState({pokemon: json.results})
   }
 
+  async componentDidMount() {
+    const data = await fetch('https://pokeapi.co/api/v2/ability/')
+    const json = await data.json()
+    this.setState({abilities: json.results})
+  }
+
   onSearchChange = event => {
     this.setState({search: event.target.value})
   }
@@ -43,24 +49,24 @@ class App extends Component {
   
 
     const abilityPromises = json.abilities.map(async (a) => {
-      const res = await fetch(a.ability.url)
-      const json = await res.json() 
+      const data = await fetch(a.ability.url)
+      const json = await data.json() 
       return json
     })
 
     const abilities = await Promise.all(abilityPromises)
 
     const statsPromises = json.stats.map(async (s) => {
-      const res = await fetch(s.stat.url)
-      const json = await res.json() 
+      const data = await fetch(s.stat.url)
+      const json = await data.json() 
       return json
     })
 
     const stats = await Promise.all(statsPromises)
 
     const movesPromises = json.moves.map(async (m) => {
-      const res = await fetch(m.move.url)
-      const json = await res.json() 
+      const data = await fetch(m.move.url)
+      const json = await data.json() 
       return json
     })
 
