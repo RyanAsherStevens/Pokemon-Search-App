@@ -37,7 +37,7 @@ class App extends Component {
   selectPokemon = async (name) => {
     const res = 
       await fetch(
-      `https://pokeapi.co/api/v2/pokemon/${name}/${ability}`,
+      `https://pokeapi.co/api/v2/pokemon/${name}/${abilities}`,
         {cache: "force-cache"})
         const json = await res.json()
   
