@@ -43,7 +43,8 @@ class App extends Component {
   
 
     const abilityPromises = json.abilities.map(async (a) => {
-      const res = await fetch(a.ability.url)
+      const res = await fetch(`https://pokeapi.co/api/v2/ability/${abilities}/`,
+      {cache: "force-cache"})
       const json = await res.json() 
       return json
     })
