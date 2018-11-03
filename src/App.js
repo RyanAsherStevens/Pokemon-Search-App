@@ -69,7 +69,7 @@ class App extends Component {
   }
 
   render() {
-    const results = this.generateSearchResults(this.state.search)
+    const results = this.generateSearchResults(this.setState.search)
     return (
       <div className="App">
         <div className="search">
