@@ -79,7 +79,7 @@ class App extends Component {
           value={this.state.search} />
           <ul>
             {results.map(r => 
-              <li onFocus={() => this.selectPokemon(r.name)}>
+              <li onClick={() => this.selectPokemon(r.name)}>
                 {r.name}
               </li>
             )}
