@@ -65,7 +65,7 @@ class App extends Component {
 
     const moves = await Promise.all(movesPromises)
 
-    this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves, search: name, abilites, moves, stats})
+    this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves, search: name, abilities, moves, stats})
   }
 
   render() {
