@@ -18,13 +18,7 @@ class App extends Component {
     const res = await  fetch('https://pokeapi.co/api/v2/pokemon/')
     const json = await res.json()
     this.setState({pokemon: json.results})
-  }
-
-  async componentDidMount() {
-    const data = await fetch('https://pokeapi.co/api/v2/ability/')
-    const json = await data.json()
-    this.setState({abilities: json.results})
-  }
+  } 
 
   onSearchChange = event => {
     this.setState({search: event.target.value})
