@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Abilities from './Abilities';
+// import Abilities from './Abilities';
 
 class App extends Component {
   constructor() {
