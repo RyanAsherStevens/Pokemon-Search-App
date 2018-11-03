@@ -74,7 +74,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="search">
-        <label>Who's that Pokemon?</label>
+        <label className="label">Who's that Pokemon?</label>
           <input 
           onChange={this.onSearchChange}
           type="text"
@@ -94,15 +94,15 @@ class App extends Component {
           <img src={this.state.selectedPokemon.sprites.front_default}/>
           <img src={this.state.selectedPokemon.sprites.back_shiny}/>
           <img src={this.state.selectedPokemon.sprites.front_shiny}/>
-          <h1>Abilities:</h1>
+          <h1 className="abilities">Abilities:</h1>
             <ul>
             {this.state.abilities.map(a => <p>{a.name}</p>)}
             </ul>
-            <h1>Moves:</h1>
+            <h1 className="Moves">Moves:</h1>
             <ul>
             {this.state.moves.map(m => <p>{m.name}</p>)}
             </ul>
-            <h1>Stats:</h1>
+            <h1 className="Stats">Stats:</h1>
             <ul>
             {this.state.stats.map(s => <p>{s.name}</p>)}
             </ul>
