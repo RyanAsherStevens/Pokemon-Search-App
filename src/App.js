@@ -10,7 +10,7 @@ class App extends Component {
       selectedPokemon: null,
       abilities: [],
       moves: [],
-      // stats: []
+      stats: []
     }
   }
 
@@ -50,13 +50,13 @@ class App extends Component {
 
     const abilities = await Promise.all(abilityPromises)
 
-    // const statsPromises = json.stats.map(async (s) => {
-    //   const data = await fetch(s.stat.url, {cache: "force-cache"})
-    //   const json = await data.json() 
-    //   return json
-    // })
+    const statsPromises = json.stats.map(async (s) => {
+      const data = await fetch(s.stat.url, {cache: "force-cache"})
+      const json = await data.json() 
+      return json
+    })
 
-    // const stats = await Promise.all(statsPromises)
+    const stats = await Promise.all(statsPromises)
 
     const movesPromises = json.moves.map(async (m) => {
       const data = await fetch(m.move.url, {cache: "force-cache"})
@@ -66,7 +66,7 @@ class App extends Component {
 
     const moves = await Promise.all(movesPromises)
 
-    this.setState({selectedPokemon: json, abilities: abilities, moves: moves, search: name})
+    this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves, search: name})
   }
 
   render() {
@@ -102,10 +102,10 @@ class App extends Component {
             <ul>
             {this.state.moves.map(m => <p>{m.name}</p>)}
             </ul>
-            {/* <h1>Stats:</h1>
+            <h1>Stats:</h1>
             <ul>
             {this.state.stats.map(s => <p>{s.name}</p>)}
-            </ul> */}
+            </ul>
         </div>
         }
       </div>
