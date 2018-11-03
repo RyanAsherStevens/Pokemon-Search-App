@@ -16,6 +16,9 @@ class App extends Component {
 
   async componentDidMount() {
     const res = await  fetch('https://pokeapi.co/api/v2/pokemon/')
+    const res = await fetch ('https://pokeapi.co/api/v2/ability/')
+    const res = await fetch ('https://pokeapi.co/api/v2/move/')
+    const res = await fetch ('https://pokeapi.co/api/v2/stat/')
     const json = await res.json()
     this.setState({pokemon: json.results})
   }
@@ -37,14 +40,13 @@ class App extends Component {
   selectPokemon = async (name) => {
     const res = 
       await fetch(
-      `https://pokeapi.co/api/v2/pokemon/${name}/`,
+        `https://pokeapi.co/api/v2/pokemon/${name}/$`,
         {cache: "force-cache"})
         const json = await res.json()
   
 
     const abilityPromises = json.abilities.map(async (a) => {
-      const res = await fetch(`https://pokeapi.co/api/v2/ability/${abilities}/`,
-      {cache: "force-cache"})
+      const res = await fetch(a.ability.url)
       const json = await res.json() 
       return json
     })
