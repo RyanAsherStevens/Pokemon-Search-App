@@ -83,11 +83,6 @@ class App extends Component {
                 {r.name}
               </li>
             )}
-            {results.map(r =>
-              <li onClick={() => this.selectPokemon(r.moves)}>
-              {r.moves}
-              </li>
-            )}
           </ul>
         </div>
 
