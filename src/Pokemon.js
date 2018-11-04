@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import Abilities from './Abilities';
 
-class App extends Component {
+class Pokemon extends Component {
   constructor() {
     super();
     this.state = {
