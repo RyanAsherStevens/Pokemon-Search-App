@@ -13,11 +13,10 @@ import SelectedPokemon from './SelectedPokemon';
 const App = () => (
   <BrowserRouter>
     <div className="container">
-      <Header />
 
       <Switch>
         <Route exact path="/" component={Pokemon} />
-        <Route path="/pokemon" component={Pokemon} />
+        <Route path="/pokemonlist" component={PokemonList} />
         <Route path="/selectedpokemon" component={SelectedPokemon} />
       </Switch>
     </div>
