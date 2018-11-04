@@ -116,4 +116,4 @@ class App extends Component {
 
 
 
-export default pokemon;
+export default Pokemon;
