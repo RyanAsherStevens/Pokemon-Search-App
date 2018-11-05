@@ -43,38 +43,39 @@ class Pokemon extends Component {
 
     const moves = await Promise.all(movesPromises)
 
-    this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves, search: name})
-}
+    this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves})
+    }
 
-render() {
-    return (
-        <div>
-            {this.state.selectedPokemon &&
-            <div className="result">
-                <img alt={this.state.selectedPokemon.sprites.back_default} 
-                     src={this.state.selectedPokemon.sprites.back_default} />
-                <img alt={this.state.selectedPokemon.sprites.back_default} 
-                     src={this.state.selectedPokemon.sprites.front_default} />
-                <img alt={this.state.selectedPokemon.sprites.back_default} 
-                     src={this.state.selectedPokemon.sprites.back_shiny} />
-                <img alt={this.state.selectedPokemon.sprites.back_default} 
-                     src={this.state.selectedPokemon.sprites.front_shiny} />
-                <h1 className="abilities">Abilities:</h1>
-                <ul>
-                {this.state.abilities.map(a => <p>{a.name}</p>)}
-                </ul>
-                <h1 className="Moves">Moves:</h1>
-                <ul>
-                {this.state.moves.map(m => <p>{m.name}</p>)}
-                </ul>
-                <h1 className="Stats">Stats:</h1>
-                <ul>
-                {this.state.stats.map(s => <p>{s.name}</p>)}
-                </ul>
+    render() {
+        return (
+            <div>
+                {this.state.selectedPokemon &&
+                <div className="result">
+                    <img alt={this.state.selectedPokemon.sprites.back_default} 
+                        src={this.state.selectedPokemon.sprites.back_default} />
+                    <img alt={this.state.selectedPokemon.sprites.back_default} 
+                        src={this.state.selectedPokemon.sprites.front_default} />
+                    <img alt={this.state.selectedPokemon.sprites.back_default} 
+                        src={this.state.selectedPokemon.sprites.back_shiny} />
+                    <img alt={this.state.selectedPokemon.sprites.back_default} 
+                        src={this.state.selectedPokemon.sprites.front_shiny} />
+                    <h1 className="abilities">Abilities:</h1>
+                    <ul>
+                    {this.state.abilities.map(a => <p>{a.name}</p>)}
+                    </ul>
+                    <h1 className="Moves">Moves:</h1>
+                    <ul>
+                    {this.state.moves.map(m => <p>{m.name}</p>)}
+                    </ul>
+                    <h1 className="Stats">Stats:</h1>
+                    <ul>
+                    {this.state.stats.map(s => <p>{s.name}</p>)}
+                    </ul>
+                </div>
+                }
             </div>
-            }
-        </div>
-    );
+        );
+    }
 }
 
 
