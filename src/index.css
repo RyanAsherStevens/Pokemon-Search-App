@@ -16,6 +16,15 @@ body {
 
 .App {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 650px;
+  height: 400px;
+  padding-left: 10px;
+  margin: 50px auto;
+  background-color: #FE0065;
+  border-radius: 10px;
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
 }
 
 .App .search {
@@ -35,7 +44,7 @@ cursor: pointer;
 .App .search 
 input {
   height: 38px;
-  width: 80%;
+  width: 100%;
   margin-bottom: 25px;
 }
 
