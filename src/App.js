@@ -8,19 +8,29 @@ import {
 // Importing App components
 import Pokemon from './Pokemon';
 import PokemonList from './PokemonList';
-import SelectedPokemon from './SelectedPokemon';
+// import SelectedPokemon from './SelectedPokemon';
 
-const App = () => (
-  <BrowserRouter>
-    <div className="container">
-
-      <Switch>
-        <Route exact path="/" component={Pokemon} />
-        <Route path="/pokemonlist" component={PokemonList} />
-        <Route path="/selectedpokemon" component={SelectedPokemon} />
-      </Switch>
-    </div>
-  </BrowserRouter>
-);
+class App extends Component {
+  render() {
+    return (
+    <BrowserRouter>
+      <div className="App row">
+        <div className="col-sm-10">
+          <Switch>
+              <Route
+                path="/pokemon/:name"
+                render={props => (
+                  <Pokemon key={props.match.params.name} {...props} />
+                )}
+              />
+              <Route exact path="/" component={PokemonList} />
+              <Route path="/pokemon" component={PokemonList} />
+            </Switch>
+        </div>
+      </div>
+    </BrowserRouter>
+    );
+  }
+}
 
 export default App;
