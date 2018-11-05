@@ -78,7 +78,4 @@ render() {
 }
 
 
-
-
-
 export default Pokemon;
