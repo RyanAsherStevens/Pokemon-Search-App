@@ -35,6 +35,7 @@ class PokemonList extends Component {
     return (
       <div className="App">
         <div className="search">
+            <label>Who's that Pokemon?</label>
           <input 
           onChange={this.onSearchChange}
           type="text"

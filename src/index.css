@@ -16,6 +16,33 @@ body {
 
 .App {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.abilities {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+.abilities p {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+
+.Moves {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Moves p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App .search {
@@ -49,8 +76,8 @@ color: white;
   background-color: azure;
   margin: 15px;
   padding: 15px;
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 50;
 }
 
 .App .search 
