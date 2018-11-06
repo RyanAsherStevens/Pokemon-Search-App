@@ -18,6 +18,7 @@ class Pokemon extends Component {
             { cache: "force-cache" })
             const json = await res.json()
   
+// fetching the abilites from the Pokemon api
 
     const abilityPromises = json.abilities.map(async (a) => {
       const data = await fetch(a.ability.url, {cache: "force-cache"})
@@ -26,7 +27,9 @@ class Pokemon extends Component {
     })
 
     const abilities = await Promise.all(abilityPromises)
+// End of Abilities
 
+// Fetching stats from the api
     const statsPromises = json.stats.map(async (s) => {
       const data = await fetch(s.stat.url, {cache: "force-cache"})
       const json = await data.json() 
@@ -34,7 +37,9 @@ class Pokemon extends Component {
     })
 
     const stats = await Promise.all(statsPromises)
+// End of stats
 
+// Fetching moves from the api
     const movesPromises = json.moves.map(async (m) => {
       const data = await fetch(m.move.url, {cache: "force-cache"})
       const json = await data.json() 
@@ -42,6 +47,8 @@ class Pokemon extends Component {
     })
 
     const moves = await Promise.all(movesPromises)
+// End of moves
+
 
     this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves})
     }
@@ -59,6 +66,8 @@ class Pokemon extends Component {
                         src={this.state.selectedPokemon.sprites.back_shiny} />
                     <img alt={this.state.selectedPokemon.sprites.back_default} 
                         src={this.state.selectedPokemon.sprites.front_shiny} />
+
+                        {/* Rendering each of the promises above: abilities, stats, and moves to the search results */}
                     <h1 className="abilities">Abilities:</h1>
                     <ul>
                     {this.state.abilities.map(a => <p>{a.name}</p>)}

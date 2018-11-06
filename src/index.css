@@ -18,6 +18,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #FE0065;
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
 }
 
 .abilities {
@@ -49,6 +51,8 @@ body {
   height: 38px;
   padding: 20px;
   width: 100%;
+  background-color: #FE0065;
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
 }
 
 .App .search
@@ -57,6 +61,7 @@ list-style: none;
 padding: 25px;
 margin: 0;
 cursor: pointer;
+background-color: #FE0065;
 }
 
 .App .search 
@@ -64,26 +69,27 @@ input {
   height: 38px;
   width: 100%;
   margin-bottom: 25px;
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
 }
 
 .App .search 
 ul li:hover {
-background-color: blue;
+background-color: transparent;
 color: white;
 }
 
 .App .result {
-  background-color: azure;
-  margin: 15px;
-  padding: 15px;
+  background-color: #BFF9FF;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
-  height: 50;
+  height: 80%;
 }
 
 .App .search 
 ul li:nth-child(odd) {
-background-color: lightslategray;
-}
+  background-color: #BFF9FF;}
 
 /* ======================
 Media Queries
