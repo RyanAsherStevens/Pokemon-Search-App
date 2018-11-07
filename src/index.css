@@ -6,11 +6,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family:  "pokemon-font", monospace;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: none;
 }
 
 
@@ -45,14 +43,10 @@ body {
 
 .Moves {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .Moves p {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* =====================
@@ -63,7 +57,8 @@ body {
   height: 38px;
   padding: 20px;
   width: 100%;
-  background-color: #FE0065;
+  background-color: #BFF9FF;
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
 }
 
 .App .search
@@ -80,9 +75,10 @@ input {
   justify-content: center;
   align-items: center;
   height: 38px;
-  width: 200%;
+  width: 100%;
   margin-bottom: 25px;
   box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
+  background-color: #BFF9FF;
 }
 
 .App .search 
