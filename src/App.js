@@ -15,7 +15,7 @@ class App extends Component {
     return (
     <BrowserRouter>
       <div className="App row">
-        <div className="col-sm-10">
+        <div className="col-xs-7 col-sm-6 col-lg-8">
           <Switch>
               <Route
                 path="/pokemon/:name"

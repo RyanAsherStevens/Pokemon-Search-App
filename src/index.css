@@ -14,12 +14,20 @@ body {
 }
 
 
+:root {
+  background-color: #FE0065;
+}
+
+.title {
+
+}
+
 .App {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #FE0065;
-  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
+  /* box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22); */
 }
 
 .abilities {
@@ -47,12 +55,15 @@ body {
   align-items: center;
 }
 
+/* =====================
+    Search Elements
+========================*/
+
 .App .search {
   height: 38px;
   padding: 20px;
   width: 100%;
   background-color: #FE0065;
-  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
 }
 
 .App .search
@@ -61,20 +72,21 @@ list-style: none;
 padding: 25px;
 margin: 0;
 cursor: pointer;
-background-color: #FE0065;
+background-color: #BFF9FF;
 }
 
 .App .search 
 input {
+  justify-content: center;
+  align-items: center;
   height: 38px;
-  width: 100%;
+  width: 200%;
   margin-bottom: 25px;
   box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
 }
 
 .App .search 
 ul li:hover {
-background-color: transparent;
 color: white;
 }
 

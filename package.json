@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "pokedex-promise-v2": "git+https://github.com/PokeAPI/pokedex-promise-v2.git",
+    "pokemon-font": "^1.8.1",
     "react": "^16.5.2",
     "react-devtools": "^3.4.2",
     "react-dom": "^16.5.2",
