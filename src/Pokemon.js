@@ -49,10 +49,9 @@ class Pokemon extends Component {
     const moves = await Promise.all(movesPromises)
 // End of moves
 
-
     this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves})
-    }
-
+}
+// Rendering the associated sprites according to the pokemon that is typed in
     render() {
         return (
             <div>
@@ -67,18 +66,27 @@ class Pokemon extends Component {
                     <img alt={this.state.selectedPokemon.sprites.back_default} 
                         src={this.state.selectedPokemon.sprites.front_shiny} />
 
-{/* Rendering each of the promises above: abilities, stats, and moves to the search results */}
+                    {/* Rendering each of the promises above: abilities, stats, and moves to the search results */}
                     <h1 className="abilities">Abilities:</h1>
                     <ul>
-                    {this.state.abilities.map(a => <p>{a.name}</p>)}
+                        {this.state.abilities.map(a => 
+                            <li key={a.name}>
+                                <p>{a.name}</p> 
+                                <p>{a.effect_entries.map(e => e.effect)}</p>
+                            </li>
+                        )}
                     </ul>
                     <h1 className="Moves">Moves:</h1>
                     <ul>
-                    {this.state.moves.map(m => <p>{m.name}</p>)}
+                        {this.state.moves.map(m => 
+                            <li key={m.name}>{m.name}</li>
+                        )}
                     </ul>
                     <h1 className="Stats">Stats:</h1>
                     <ul>
-                    {this.state.stats.map(s => <p>{s.name}</p>)}
+                        {this.state.selectedPokemon.stats.map(s => 
+                            <li key={s.stat.name}>{s.stat.name} {s.base_stat}</li>
+                        )}
                     </ul>
                 </div>
                 }
