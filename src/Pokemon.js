@@ -10,7 +10,7 @@ class Pokemon extends Component {
       stats: []
     }
   }
-
+// mounting the components and making the initial fetch to the API
   async componentDidMount() {
     const res =
         await fetch(
