@@ -32,37 +32,42 @@ body {
 }
 
 .abilities {
+  text-align: center;
   color: rgb(241, 19, 108);
-  display: flex;
-  justify-content: left;
-  align-items: left;
 }
 
 .abilities li p {
   display: flex;
-  justify-content: left;
-  align-items: left;
+  justify-content: auto;
+  align-items: auto;
 }
 
 
 .Moves {
   text-align: center;
-  display: flex;
   color: rgb(241, 19, 108);
 }
 
 .Moves li {
   text-align: center;
-  display: flex;
 }
 
 .Stats {
   color: rgb(241, 19, 108);
-  display: flex;
+  text-align: center;
 }
 
 .Stats li {
-  display: flex;
+  text-align: center;
+}
+
+.Pokemon {
+  color: rgb(241, 19, 108);
+  text-align: center;
+}
+
+.Sprites {
+  text-align: center;
 }
 
 /* =====================
