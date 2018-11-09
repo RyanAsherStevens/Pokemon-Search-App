@@ -40,6 +40,7 @@ class PokemonList extends Component {
       <div className="App">
         <div className="search">
             <label className="title">Who's that Pokemon?</label>
+                <p className="info">Type in your favorite Pokemon to find out it's abilities, moves, and base stats!</p>
           <input 
           onChange={this.onSearchChange}
           type="text"

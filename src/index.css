@@ -24,12 +24,14 @@ body {
 }
 
 .App {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #FE0065;
   /* box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22); */
 }
+
 
 .abilities {
   text-align: center;
@@ -42,10 +44,15 @@ body {
   align-items: auto;
 }
 
+.info {
+  color: #BFF9FF;
+  font-size: 1.3em;
+}
 
 .Moves {
   text-align: center;
   color: rgb(241, 19, 108);
+  font-size: 1.5rem;
 }
 
 .Moves li {
@@ -109,6 +116,7 @@ color: white;
 }
 
 .result {
+  text-align: justify;
   background-color: #BFF9FF;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -126,7 +134,21 @@ ul li:nth-child(odd) {
 Media Queries
 ========================*/
 
-@media (min-width: 769px) {
+@media (min-width: 1000px) {
+  .App .search {
+    display: center;
+    height: 162px;
+    padding: 20px;
+    width: 100%;
+    background-color: #BFF9FF;
+    box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
+  }
+
+  .info {
+    color: rgb(241, 19, 108);
+    font-size: 1.3em;
+  }
+  
   .abilities {
     font-size: 5.0rem;
     margin: auto;
@@ -159,13 +181,25 @@ Media Queries
 
 }
 
-@media (max-width: 576px) {
+@media (max-width: 800px) {
+  .info {
+    color: rgb(241, 19, 108);
+    font-size: 1.3em;
+  }
+  
   .App .search {
     display: center;
-    height: 167px;
+    height: 282px;
     padding: 20px;
     width: 100%;
     background-color: #BFF9FF;
     box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
   }
+
+  .abilities li p {
+    text-align: left;
+    font-size: 2rem;
+    margin: auto;
+  }
+
 }
