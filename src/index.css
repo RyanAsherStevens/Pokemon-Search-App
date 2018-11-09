@@ -17,7 +17,10 @@ body {
 }
 
 .title {
-
+  text-align: center;
+  display: center;
+  font-size: 3.5em;
+  color: rgb(241, 19, 108);
 }
 
 .App {
@@ -29,12 +32,13 @@ body {
 }
 
 .abilities {
+  color: rgb(241, 19, 108);
   display: flex;
   justify-content: left;
   align-items: left;
 }
 
-.abilities p {
+.abilities li p {
   display: flex;
   justify-content: left;
   align-items: left;
@@ -43,9 +47,10 @@ body {
 
 .Moves {
   display: flex;
+  color: rgb(241, 19, 108);
 }
 
-.Moves p {
+.Moves li {
   display: flex;
 }
 
@@ -54,6 +59,7 @@ body {
 ========================*/
 
 .App .search {
+  display: center;
   height: 38px;
   padding: 20px;
   width: 100%;
@@ -86,7 +92,7 @@ ul li:hover {
 color: white;
 }
 
-.App .result {
+.result {
   background-color: #BFF9FF;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -102,3 +108,26 @@ ul li:nth-child(odd) {
 /* ======================
 Media Queries
 ========================*/
+
+@media (min-width: 769px) {
+  .abilities {
+    font-size: 3.0rem;
+    margin: auto;
+  }
+  
+  .abilities li p {
+    font-size: 5.0rem;
+    margin: auto;
+  }
+  
+  
+  .Moves {
+    font-size: 3.0rem;
+    margin: auto;
+  }
+  
+  .Moves li {
+    font-size: 5.0rem;
+    margin: auto;
+  }
+}

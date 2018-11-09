@@ -66,7 +66,7 @@ class Pokemon extends Component {
                     <img alt={this.state.selectedPokemon.sprites.back_default} 
                         src={this.state.selectedPokemon.sprites.front_shiny} />
 
-                    {/* Rendering each of the promises above: abilities, stats, and moves to the search results */}
+    {/* Rendering each of the promises above: abilities, stats, and moves to the search results */}
                     <h1 className="abilities">Abilities:</h1>
                     <ul>
                         {this.state.abilities.map(a => 
