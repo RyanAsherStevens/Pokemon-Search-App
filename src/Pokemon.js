@@ -51,7 +51,7 @@ class Pokemon extends Component {
 
     this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves})
 }
-// Rendering the associated sprites according to the pokemon that is typed in
+// Rendering the associated sprites according to the pokemon that is typed in, front and back with the normal colors and shiny.
     render() {
         return (
             <div>
@@ -66,7 +66,8 @@ class Pokemon extends Component {
                     <img alt={this.state.selectedPokemon.sprites.back_default} 
                         src={this.state.selectedPokemon.sprites.front_shiny} />
 
-    {/* Rendering each of the promises above: abilities, stats, and moves to the search results */}
+    {/* Rendering each of the promises above: abilities, stats, and moves to the search results. 
+    Also rendering the base values for stats and the associated effect of each ability. */}
                     <h1 className="abilities">Abilities:</h1>
                     <ul>
                         {this.state.abilities.map(a => 

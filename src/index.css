@@ -19,7 +19,7 @@ body {
 .title {
   text-align: center;
   display: center;
-  font-size: 3.5em;
+  font-size: 3.8em;
   color: rgb(241, 19, 108);
 }
 
@@ -46,11 +46,22 @@ body {
 
 
 .Moves {
+  text-align: center;
   display: flex;
   color: rgb(241, 19, 108);
 }
 
 .Moves li {
+  text-align: center;
+  display: flex;
+}
+
+.Stats {
+  color: rgb(241, 19, 108);
+  display: flex;
+}
+
+.Stats li {
   display: flex;
 }
 
@@ -76,8 +87,8 @@ cursor: pointer;
 background-color: #BFF9FF;
 }
 
-.App .search 
-input {
+.search input {
+  text-align: center;
   justify-content: center;
   align-items: center;
   height: 38px;
@@ -103,7 +114,8 @@ color: white;
 
 .App .search 
 ul li:nth-child(odd) {
-  background-color: #BFF9FF;}
+  background-color: #BFF9FF;
+}
 
 /* ======================
 Media Queries
@@ -111,23 +123,44 @@ Media Queries
 
 @media (min-width: 769px) {
   .abilities {
-    font-size: 3.0rem;
+    font-size: 5.0rem;
     margin: auto;
   }
   
   .abilities li p {
-    font-size: 5.0rem;
-    margin: auto;
-  }
-  
-  
-  .Moves {
     font-size: 3.0rem;
     margin: auto;
   }
   
-  .Moves li {
+  .Moves {
     font-size: 5.0rem;
     margin: auto;
+  }
+  
+  .Moves li {
+    font-size: 3.0rem;
+    margin: auto;
+  }
+
+  .Stats {
+    font-size: 5.0rem;
+    margin: auto;
+  }
+  
+  .Stats li {
+    font-size: 3.0rem;
+    margin: auto;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .App .search {
+    display: center;
+    height: 167px;
+    padding: 20px;
+    width: 100%;
+    background-color: #BFF9FF;
+    box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
   }
 }
