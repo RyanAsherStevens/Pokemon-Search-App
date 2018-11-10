@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   font-family:  "pokemon-font", monospace;
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: none;
@@ -150,38 +150,42 @@ Media Queries
   }
   
   .abilities {
-    font-size: 5.0rem;
+    font-size: 80px;
     margin: auto;
   }
   
   .abilities li p {
-    font-size: 3.0rem;
+    font-size: 60px;
     margin: auto;
   }
   
   .Moves {
-    font-size: 5.0rem;
+    font-size: 80px;
     margin: auto;
   }
   
   .Moves li {
-    font-size: 3.0rem;
+    font-size: 60px;
     margin: auto;
   }
 
   .Stats {
-    font-size: 5.0rem;
+    font-size: 80px;
     margin: auto;
   }
   
   .Stats li {
-    font-size: 3.0rem;
+    font-size: 60px;
     margin: auto;
   }
 
 }
 
 @media (max-width: 800px) {
+  body {
+    padding: 10px;
+  }
+
   .info {
     color: rgb(241, 19, 108);
     font-size: 1.3em;
@@ -197,6 +201,7 @@ Media Queries
   }
 
   .abilities li p {
+    padding-right: 20px;
     text-align: left;
     font-size: 2rem;
     margin: auto;
