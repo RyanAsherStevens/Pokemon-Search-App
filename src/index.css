@@ -96,7 +96,7 @@ list-style: none;
 padding: 25px;
 margin: 0;
 cursor: pointer;
-background-color: #BFF9FF;
+background-color: rgb(47, 201, 218);
 }
 
 .search input {
@@ -112,7 +112,8 @@ background-color: #BFF9FF;
 
 .App .search 
 ul li:hover {
-color: white;
+color: rgb(92, 236, 252);
+border-radius: 100px;
 }
 
 .result {
