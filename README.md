@@ -2,4 +2,4 @@ Welcome to the Pokemon Search App! In this App you can search for your favorite 
 
 To run this you will need to, git clone (copy and paste url)
 Then install the app with, npm install.
-Then finally to run it you will need to, npm run.
+Then finally to run it you will need to, npm start.
