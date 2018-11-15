@@ -9,4 +9,4 @@ JavaScript needs to enabled to run this App.
 3)	Then finally to run it you will need to, npm start.
 
 
-Some pokemon to search for just in case: charizard, mewtwo, rayquaza, and metagross. Do not use capitol letters, please and thank you.
+Some pokemon to search for just in case: charizard, mewtwo, rayquaza, and metagross. Use lowercase when typing in the Pokemon.
