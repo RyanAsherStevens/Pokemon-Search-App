@@ -7,3 +7,6 @@ JavaScript needs to enabled to run this App.
 1)	To run this you will need to, git clone (copy and paste url)
 2)	Then install the app with, npm install.
 3)	Then finally to run it you will need to, npm start.
+
+
+Some pokemon to search for just in case: Charizard, Mewtwo, Rayquaza, and Metagross.
