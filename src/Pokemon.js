@@ -63,7 +63,7 @@ const typesPromises = json.types.map(async (t) => {
 
 // Fetching nature from the api
 const regionPromises = json.regions.map(async (r) => {
-    const data = await fetch(r.regions.url, {cache: "force-cache"})
+    const data = await fetch(r.region.url, {cache: "force-cache"})
     const json = await data.json() 
     return json
   })
