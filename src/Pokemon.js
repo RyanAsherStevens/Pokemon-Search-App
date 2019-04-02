@@ -62,13 +62,13 @@ const typesPromises = json.types.map(async (t) => {
 // End of type
 
 // Fetching nature from the api
-const regionsPromises = json.regions.map(async (r) => {
-    const data = await fetch(r.region.url, {cache: "force-cache"})
-    const json = await data.json() 
-    return json
-  })
+//const regionsPromises = json.regions.map(async (r) => {
+//    const data = await fetch(r.region.url, {cache: "force-cache"})
+//    const json = await data.json() 
+//    return json
+//  })
 
-  const regions = await Promise.all(regionsPromises)
+//  const regions = await Promise.all(regionsPromises)
 // End of nature
 
     this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves, types: types, regions: regions})
