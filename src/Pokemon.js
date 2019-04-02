@@ -8,8 +8,7 @@ class Pokemon extends Component {
       abilities: [],
       moves: [],
       stats: [],
-      types: [],
-      regions: []
+      types: []
     }
   }
 // mounting the components and making the initial fetch to the API
