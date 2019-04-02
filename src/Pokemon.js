@@ -105,7 +105,7 @@ const typesPromises = json.types.map(async (t) => {
                     </ul>
                     <h1 className="Types">Types:</h1>
                     <ul>
-                        {this.state.moves.map(t => 
+                        {this.state.types.map(t => 
                             <li key={t.name}>{t.name}</li>
                         )}
                     </ul>
