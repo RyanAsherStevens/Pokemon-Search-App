@@ -49,6 +49,16 @@ class Pokemon extends Component {
     const moves = await Promise.all(movesPromises)
 // End of moves
 
+// Fetching type from the api
+const typesPromises = json.types.map(async (t) => {
+    const data = await fetch(t.type.url, {cache: "force-cache"})
+    const json = await data.json() 
+    return json
+  })
+
+  const types = await Promise.all(typesPromises)
+// End of type
+
     this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves})
 }
 // Rendering the associated sprites according to the pokemon that is typed in, front and back with the normal colors and shiny.
