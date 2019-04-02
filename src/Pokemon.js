@@ -69,7 +69,7 @@ const naturesPromises = json.natures.map(async (n) => {
   const natures = await Promise.all(naturesPromises)
 // End of nature
 
-    this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves, types: types, natures: nature})
+    this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves, types: types, natures: natures})
 }
 // Rendering the associated sprites according to the pokemon that is typed in, front and back with the normal colors and shiny.
     render() {
