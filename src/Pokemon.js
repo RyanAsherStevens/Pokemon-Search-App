@@ -7,7 +7,9 @@ class Pokemon extends Component {
       selectedPokemon: null,
       abilities: [],
       moves: [],
-      stats: []
+      stats: [],
+      types: [],
+      natures: []
     }
   }
 // mounting the components and making the initial fetch to the API
@@ -60,8 +62,8 @@ const typesPromises = json.types.map(async (t) => {
 // End of type
 
 // Fetching nature from the api
-const naturesPromises = json.natures.map(async (u) => {
-    const data = await fetch(u.nature.url, {cache: "force-cache"})
+const naturesPromises = json.natures.map(async (n) => {
+    const data = await fetch(n.nature.url, {cache: "force-cache"})
     const json = await data.json() 
     return json
   })
@@ -121,8 +123,8 @@ const naturesPromises = json.natures.map(async (u) => {
                     </ul>
                     <h1 className="Natures">Natures:</h1>
                     <ul>
-                        {this.state.natures.map(u => 
-                            <li key={u.name}>{u.name}</li>
+                        {this.state.natures.map(n => 
+                            <li key={n.name}>{n.name}</li>
                         )}
                     </ul>
                 </div>
