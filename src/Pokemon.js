@@ -59,7 +59,17 @@ const typesPromises = json.types.map(async (t) => {
   const types = await Promise.all(typesPromises)
 // End of type
 
-    this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves, types: types})
+// Fetching nature from the api
+const naturesPromises = json.natures.map(async (n) => {
+    const data = await fetch(n.nature.url, {cache: "force-cache"})
+    const json = await data.json() 
+    return json
+  })
+
+  const natures = await Promise.all(naturesPromises)
+// End of nature
+
+    this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves, types: types, natures: nature})
 }
 // Rendering the associated sprites according to the pokemon that is typed in, front and back with the normal colors and shiny.
     render() {
@@ -107,6 +117,12 @@ const typesPromises = json.types.map(async (t) => {
                     <ul>
                         {this.state.types.map(t => 
                             <li key={t.name}>{t.name}</li>
+                        )}
+                    </ul>
+                    <h1 className="Natures">Natures:</h1>
+                    <ul>
+                        {this.state.natures.map(n => 
+                            <li key={n.name}>{n.name}</li>
                         )}
                     </ul>
                 </div>
