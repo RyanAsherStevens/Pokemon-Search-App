@@ -11,7 +11,7 @@ class Pokemon extends Component {
       types: []
     }
   }
-// mounting the components and making the initial fetch to the API
+    // mounting the components and making the initial fetch to the API
   async componentDidMount() {
     const res =
         await fetch(
@@ -19,7 +19,7 @@ class Pokemon extends Component {
             { cache: "force-cache" })
             const json = await res.json()
   
-// fetching the abilites from the Pokemon api
+    // fetching the abilites from the Pokemon api
 
     const abilityPromises = json.abilities.map(async (a) => {
       const data = await fetch(a.ability.url, {cache: "force-cache"})
@@ -28,9 +28,9 @@ class Pokemon extends Component {
     })
 
     const abilities = await Promise.all(abilityPromises)
-// End of Abilities
+    // End of Abilities
 
-// Fetching stats from the api
+    // Fetching stats from the api
     const statsPromises = json.stats.map(async (s) => {
       const data = await fetch(s.stat.url, {cache: "force-cache"})
       const json = await data.json() 
@@ -38,9 +38,9 @@ class Pokemon extends Component {
     })
 
     const stats = await Promise.all(statsPromises)
-// End of stats
+    // End of stats
 
-// Fetching moves from the api
+    // Fetching moves from the api
     const movesPromises = json.moves.map(async (m) => {
       const data = await fetch(m.move.url, {cache: "force-cache"})
       const json = await data.json() 
@@ -48,27 +48,27 @@ class Pokemon extends Component {
     })
 
     const moves = await Promise.all(movesPromises)
-// End of moves
+    // End of moves
 
-// Fetching type from the api
-const typesPromises = json.types.map(async (t) => {
-    const data = await fetch(t.type.url, {cache: "force-cache"})
-    const json = await data.json() 
-    return json
-  })
+    // Fetching type from the api
+    const typesPromises = json.types.map(async (t) => {
+        const data = await fetch(t.type.url, {cache: "force-cache"})
+        const json = await data.json() 
+        return json
+    })
 
   const types = await Promise.all(typesPromises)
-// End of type
+    // End of type
 
-// Fetching nature from the api
-//const regionsPromises = json.regions.map(async (r) => {
-//    const data = await fetch(r.region.url, {cache: "force-cache"})
-//    const json = await data.json() 
-//    return json
-//  })
+    // Fetching nature from the api
+    //const regionsPromises = json.regions.map(async (r) => {
+    //    const data = await fetch(r.region.url, {cache: "force-cache"})
+    //    const json = await data.json() 
+    //    return json
+    //  })
 
-//  const regions = await Promise.all(regionsPromises)
-// End of nature
+    //  const regions = await Promise.all(regionsPromises)
+    // End of nature
 
     this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves, types: types})
 }
