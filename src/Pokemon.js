@@ -120,12 +120,12 @@ async componentDidMount() {
                             <li key={t.name}>{t.name}</li>
                         )}
                     </ul>
-                   {/* <h1 className="Regions">Regions:</h1>
+                   <h1 className="Regions">Regions:</h1>
                     <ul>
                         {this.state.regions.map(r => 
                             <li key={r.name}>{r.name}</li>
                         )}
-                        </ul> */}
+                        </ul>
                 </div>
                 }
             </div>
