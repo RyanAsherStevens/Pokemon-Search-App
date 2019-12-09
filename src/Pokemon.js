@@ -10,12 +10,12 @@ class Pokemon extends Component {
       stats: [],
       types: []
     }
-  }
+}
     // mounting the components and making the initial fetch to the API
-  async componentDidMount() {
+async componentDidMount() {
     const res =
         await fetch(
-            `https://pokeapi.co/api/v2/pokemon/${this.props.match.params.name}/`,
+            `https://pokeapi.co/api/v2/pokemon/?offset=1&limit=964${this.props.match.params.name}/`,
             { cache: "force-cache" })
             const json = await res.json()
   
@@ -61,16 +61,16 @@ class Pokemon extends Component {
     // End of type
 
     // Fetching nature from the api
-    //const regionsPromises = json.regions.map(async (r) => {
-    //    const data = await fetch(r.region.url, {cache: "force-cache"})
-    //    const json = await data.json() 
-    //    return json
-    //  })
+    const regionsPromises = json.regions.map(async (r) => {
+       const data = await fetch(r.region.url, {cache: "force-cache"})
+       const json = await data.json() 
+       return json
+     })
 
-    //  const regions = await Promise.all(regionsPromises)
+     const regions = await Promise.all(regionsPromises)
     // End of nature
 
-    this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves, types: types})
+    this.setState({selectedPokemon: json, abilities: abilities, stats: stats, moves: moves, types: types, regions: regions})
 }
 // Rendering the associated sprites according to the pokemon that is typed in, front and back with the normal colors and shiny.
     render() {

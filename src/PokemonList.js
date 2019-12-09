@@ -13,7 +13,7 @@ class PokemonList extends Component {
   }
 
   async componentDidMount() {
-    const res = await  fetch('https://pokeapi.co/api/v2/pokemon/')
+    const res = await  fetch('https://pokeapi.co/api/v2/pokemon/?offset=1&limit=964')
     const json = await res.json()
     this.setState({pokemon: json.results})
   }
