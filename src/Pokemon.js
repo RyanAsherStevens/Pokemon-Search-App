@@ -57,7 +57,7 @@ class Pokemon extends Component {
         return json
     })
 
-  const types = await Promise.all(typesPromises)
+    const types = await Promise.all(typesPromises)
     // End of type
 
     // Fetching nature from the api
