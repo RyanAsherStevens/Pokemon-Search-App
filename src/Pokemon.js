@@ -93,6 +93,12 @@ class Pokemon extends Component {
                     </div>
     {/* Rendering each of the promises above: abilities, stats, and moves to the search results. 
     Also rendering the base values for stats and the associated effect of each ability. */}
+                     <h1 className="Types">Types:</h1>
+                    <ul>
+                        {this.state.selectedPokemon.types.map(t => 
+                            <li key={t.name}>{t.name}</li>
+                        )}
+                    </ul>
                     <h1 className="abilities">Abilities:</h1>
                     <ul>
                         {this.state.abilities.map(a => 
@@ -112,12 +118,6 @@ class Pokemon extends Component {
                     <ul>
                         {this.state.selectedPokemon.stats.map(s => 
                             <li key={s.stat.name}>{s.stat.name} {s.base_stat}</li>
-                        )}
-                    </ul>
-                    <h1 className="Types">Types:</h1>
-                    <ul>
-                        {this.state.types.map(t => 
-                            <li key={t.name}>{t.name}</li>
                         )}
                     </ul>
                    {/* <h1 className="Regions">Regions:</h1>
