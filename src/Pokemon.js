@@ -95,7 +95,7 @@ class Pokemon extends Component {
     Also rendering the base values for stats and the associated effect of each ability. */}
                      <h1 className="Types">Types:</h1>
                     <ul>
-                        {this.state.selectedPokemon.types.map(t => 
+                        {this.state.types.map(t => 
                             <li key={t.name}>{t.name}</li>
                         )}
                     </ul>
